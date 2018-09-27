@@ -1,0 +1,31 @@
+
+public class HelloWorld{
+
+public static String stringRepetition (String s, int i){
+    String t="i";
+    StringBuffer sbf = new StringBuffer(s);
+    if(i==1)
+        t=Character.toString(s.charAt(0));
+    else{
+        sbf=sbf.append(" ");
+        for(int c=0; c<i; c++){
+            for(int d=0; d<i; d++){
+                sbf=sbf.append(s.charAt(d));
+            }
+          sbf=sbf.append(" ");  
+            
+        }
+        t=sbf.toString();
+   
+    }
+    return t;
+}
+
+     public static void main(String []args){
+        String s="Karthik";
+        int i=2;
+        
+        System.out.println("\n" +stringRepetition (s,i));
+    
+     }
+}

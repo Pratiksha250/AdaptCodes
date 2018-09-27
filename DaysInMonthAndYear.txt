@@ -1,0 +1,34 @@
+public class HelloWorld{
+
+public static int noOfDays (int m, int y){
+    
+    if(m<=0 || m>12)
+        return -1;
+    else if(y<=0)
+        return -2;
+    else{
+        if(m==2){
+            if(y % 4 == 0 && ( y % 100 != 0 || y % 400 == 0 ))
+                return 29;
+            else
+                return 28;
+        }
+        else if((m<8 && m%2!=0) ||(m>=8 && m%2==0))
+            return 31;
+        else 
+            return 30;
+    }
+    
+    
+    
+
+}
+
+     public static void main(String []args){
+        int month=2;
+        int year=2013;
+        
+        System.out.println("\n" +noOfDays (month,year));
+    
+     }
+}

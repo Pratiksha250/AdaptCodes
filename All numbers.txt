@@ -1,0 +1,24 @@
+public class HelloWorld{
+
+public static int validateNumber(String[] arr){
+    try{
+        for(int i=0; i<arr.length; i++){
+            Integer.parseInt(arr[i]);
+        }
+        return 1;
+    }
+    catch(NumberFormatException e){
+        return -1;
+    }
+    
+}
+
+     public static void main(String []args){
+        //System.out.println("Hello World");
+        String arr[]={"12","1","4","-1"};
+        System.out.println(validateNumber(arr));
+        
+        
+        
+     }
+}
